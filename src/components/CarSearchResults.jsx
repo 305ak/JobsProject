@@ -1,4 +1,5 @@
 import React from "react";
+import QS from "query-string";
 
 const CAR_RESULTS = {
   "num_found": 18471,
@@ -1929,6 +1930,7 @@ class CarSearchResults extends React.Component {
 
   render(){
     console.log(this.results.length);
+    console.log(QS.parse(this.props.location.search));
 
     return(
       <table border="1" width="100%">
@@ -1953,7 +1955,7 @@ class CarSearchResults extends React.Component {
                 <td><a href={result.vdp_url}>View Car</a></td>
               </tr>
 
-            
+
 
 
             )
