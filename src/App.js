@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import CarSearchResults from "./components/CarSearchResults"
 import CarSearchForm from "./components/CarSearchForm"
+import CarResult from "./components/CarResult"
 
 
 

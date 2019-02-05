@@ -1,4 +1,5 @@
 import React from "react";
+import CarResult from "./CarResult"
 import QS from "query-string";
 
 const CAR_RESULTS = {
@@ -1939,35 +1940,19 @@ class CarSearchResults extends React.Component {
         <th>Car Type</th>
         <th>Miles</th>
         <th>Price</th>
-          <th>url</th>
+        <th>url</th>
       </tr>
 
         {
           this.results.map((result) => {
             return(
-
-
-
-              <tr>
-                <td>{ result.heading }</td>
-                <td>{ result.miles }</td>
-                <td>{ result.price }</td>
-                <td><a href={result.vdp_url}>View Car</a></td>
-              </tr>
-
-
-
-
+              <CarResult result = {result} />
             )
           })
         }
       </table>
-
-
     )
-
   }
-
 }
 
 export default CarSearchResults;
