@@ -1931,15 +1931,31 @@ class CarSearchResults extends React.Component {
     console.log(this.results.length);
 
     return(
-      <table>
+      <table border="1" width="100%">
+
+      <tr>
+        <th>Car Type</th>
+        <th>Miles</th>
+        <th>Price</th>
+          <th>url</th>
+      </tr>
+
         {
           this.results.map((result) => {
             return(
+
+
+
               <tr>
                 <td>{ result.heading }</td>
                 <td>{ result.miles }</td>
                 <td>{ result.price }</td>
+                <td><a href={result.vdp_url}>View Car</a></td>
               </tr>
+
+            
+
+
             )
           })
         }
