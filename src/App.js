@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import JobSearchResults from "./components/JobSearchResults"
-
+import CarSearchResults from "./components/CarSearchResults"
+import CarSearchForm from "./components/CarSearchForm"
 
 class App extends Component {
   render() {
     return (
-      <div>  
+      <div>
 
-
-<JobSearchResults/>
+<CarSearchResults/>
+<CarSearchForm/>
 
       </div>
     );
