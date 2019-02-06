@@ -15,8 +15,8 @@ class App extends Component {
       <div>
 
 
-<CarSearchForm/>
-<CarSearchResults/>
+        <CarSearchForm/>
+        <CarSearchResults/>
 
       </div>
     );

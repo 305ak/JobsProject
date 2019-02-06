@@ -15,7 +15,7 @@ const Root = () => {
     <BrowserRouter>
     <div>
       <Route exact path="/" component = {CarSearchForm} />
-      <Route path ="/results" component={ CarSearchResults } />
+      <Route path ="/results/:range" component={ CarSearchResults } />
     </div>
   </BrowserRouter>
   )
