@@ -5,6 +5,8 @@ class CarResult extends React.Component {
   render(){
     const result = this.props.result;
     const testing = (result.price / result.miles).toFixed(2);
+    
+
     let highlight = ""
     if (testing > 2) {
         highlight = "highlight"
