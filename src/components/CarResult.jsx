@@ -7,8 +7,11 @@ class CarResult extends React.Component {
     const testing = (result.price / result.miles).toFixed(2);
 
     let highlight = ""
-    if (testing > 2) {
+    if (testing > 10) {
         highlight = "highlight"
+    }
+    else {
+      highlight = "highlightNothing"
     }
 
     return(
