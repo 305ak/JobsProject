@@ -3,23 +3,14 @@ import CarResult from "./CarResult"
 import QS from "query-string";
 
 
-
-
-
 class CarSearchResults extends React.Component {
 
 constructor() {
   super();
-
   this.state = {results:[]}
-
-
 }
 
-
-
 componentDidMount() {
-
   const requestHeaders = { "Content-Type": "application/json", "Host": "marketcheck-prod.apigee.net" };
   const requestBody = {
    "api_key": "9W7A1ilu6IdNNLlUu9N9pcrjobRW2WA6",
@@ -41,25 +32,7 @@ componentDidMount() {
    .then((response) => {
      console.log(response);
    });
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
 
   get results() {
     return this.state.results;

@@ -18,7 +18,6 @@ class CarSearchForm extends React.Component {
   }
 
   render(){
-
     return(
       <div><center>
         <h2>Lookup any Car</h2>
@@ -33,14 +32,8 @@ class CarSearchForm extends React.Component {
         </form>
         </center>
       </div>
-
-
-
-
     )
-
   }
-
 }
 
 export default CarSearchForm

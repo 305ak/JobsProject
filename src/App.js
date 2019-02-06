@@ -6,18 +6,13 @@ import CarSearchForm from "./components/CarSearchForm"
 import CarResult from "./components/CarResult"
 
 
-
-
 class App extends Component {
 
   render() {
     return (
       <div>
-
-
-        <CarSearchForm/>
-        <CarSearchResults/>
-
+        <CarSearchForm />
+        <CarSearchResults />
       </div>
     );
   }
