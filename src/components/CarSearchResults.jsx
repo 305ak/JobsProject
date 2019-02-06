@@ -1937,10 +1937,12 @@ class CarSearchResults extends React.Component {
       <table border="1" width="100%">
 
       <tr>
+        <th>Year</th>
         <th>Car Type</th>
         <th>Miles</th>
         <th>Price</th>
         <th>url</th>
+        <th>Buy Score</th>
       </tr>
 
         {

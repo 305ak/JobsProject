@@ -4,12 +4,22 @@ class CarResult extends React.Component {
 
   render(){
     const result = this.props.result;
+    const testing = (result.price / result.miles).toFixed(2);
+    let highlight = ""
+    if (testing > 2) {
+        highlight = "highlight"
+    }
+
+
+
     return(
-      <tr>
+      <tr className={highlight}>
+        <td>{ result.build.year }</td>
         <td>{ result.heading }</td>
         <td>{ result.miles }</td>
         <td>{ result.price }</td>
         <td><a href={result.vdp_url}>View Car</a></td>
+        <td>{testing}</td>
       </tr>
     )
   }

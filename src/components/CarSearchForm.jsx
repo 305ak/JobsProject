@@ -11,6 +11,9 @@ class CarSearchForm extends React.Component {
           <select name="characters" id="character">
             <option value="---">Choose a Car Type....</option>
 
+
+
+
           </select>
           <button type="submit">Go</button>
         </form>
