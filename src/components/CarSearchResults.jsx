@@ -58,25 +58,27 @@ componentDidMount() {
 
   render(){
     return(
-      <table border="1" width="100%">
+      <div>
+        <table border="1" width="100%">
+        <tr>
+          <th>Year</th>
+          <th>Car Type</th>
+          <th>Miles</th>
+          <th>Price</th>
+          <th>url</th>
+          <th>Buy Score</th>
+        </tr>
 
-      <tr>
-        <th>Year</th>
-        <th>Car Type</th>
-        <th>Miles</th>
-        <th>Price</th>
-        <th>url</th>
-        <th>Buy Score</th>
-      </tr>
+          {
+            this.results.map((result) => {
+              return(
+                <CarResult result = {result} />
+              )
+            })
+          }
+        </table>
+      </div>
 
-        {
-          this.results.map((result) => {
-            return(
-              <CarResult result = {result} />
-            )
-          })
-        }
-      </table>
     )
   }
 }

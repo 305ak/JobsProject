@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import CarSearchForm from './components/CarSearchForm';
@@ -13,6 +13,12 @@ const Root = () => {
   return (
     <BrowserRouter>
     <div>
+      <header>
+        <Link to = "/">
+          <img src="https://i.imgur.com/BaQBH1k.jpg" title="home"/>
+        </Link>
+      </header>
+
       <Route exact path="/" component = {CarSearchForm} />
       <Route path ="/results" component={ CarSearchResults } />
     </div>
