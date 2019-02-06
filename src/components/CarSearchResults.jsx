@@ -25,13 +25,17 @@ componentDidMount() {
    // "price_range": "0-20000",
    make: this.queryParams.make,
    year: this.queryParams.year,
-   miles_range: this.queryParams.miles_range,
    carfax_clean_title: this.queryParams.carfax_clean_title,
   };
 
   if(this.queryParams.price_limit) {
     requestBody["price_range"] = `0-${this.queryParams.price_limit}`
   }
+
+  if(this.queryParams.miles_limit) {
+    requestBody["miles_range"] = `0-${this.queryParams.miles_limit}`
+  }
+
 
   const url = `https://dg0fgtyxv7.execute-api.us-east-2.amazonaws.com/prod?${QS.stringify(requestBody)}`;
 
