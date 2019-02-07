@@ -44,7 +44,8 @@ componentDidMount() {
    .then((response) => {
      this.setState({
        results: response.listings,
-       num_found: response.num_found
+       num_found: response.num_found,
+
 
      });
 
@@ -62,7 +63,7 @@ componentDidMount() {
 
 
   get page() {
-    return this.queryParams.page || 1;
+    return Number(this.queryParams.page) || 1;
   }
 
   get totalPages() {
@@ -70,11 +71,11 @@ componentDidMount() {
   }
 
   get nextPage() {
-return (this.queryParams.page + 1);
+return (this.page + 1);
   }
 
   get prevPages() {
-return (this.queryParams.page - 1);
+return (this.page - 1);
   }
 
   get queryParams() {
