@@ -4,14 +4,21 @@ class CarResult extends React.Component {
 
   render(){
     const result = this.props.result;
-    const testing = (result.price / result.miles).toFixed(2);
+    const testing = (result.price / result.miles).toFixed(0);
+    const year = result.build.year;
 
     let highlight = ""
     if (testing > 10) {
-        highlight = "highlight"
+      console.log(testing);
+        highlight = "highlight2"
     }
     else {
       highlight = "highlightNothing"
+    }
+
+    if (year === 2012) {
+      highlight = "pinkYear"
+
     }
 
     return(

@@ -7,7 +7,7 @@ class CarSearchResults extends React.Component {
 
 constructor() {
   super();
-  this.state = {results:[]}
+  this.state = {results:[],num_found:-1}
 }
 
 componentDidMount() {
@@ -43,13 +43,21 @@ componentDidMount() {
    .then(response => response.json())
    .then((response) => {
      this.setState({
-       results: response.listings
+       results: response.listings,
+       num_found: response.num_found
+
      });
+
+
    });
 }
 
   get results() {
     return this.state.results;
+  }
+
+  get num_found() {
+    return this.state.num_found;
   }
 
   get queryParams() {
@@ -72,11 +80,13 @@ componentDidMount() {
           {
             this.results.map((result) => {
               return(
-                <CarResult result = {result} />
+                result.miles === null ? "" : <CarResult result = {result} />
               )
             })
           }
         </table>
+<p>Total Results: {this.num_found}</p> 
+
       </div>
 
     )

@@ -18,6 +18,11 @@ class CarSearchForm extends React.Component {
           <input type="text" name="price_limit" id="price_limit" placeholder="Price limit" />
           <input type="text" name="miles_limit" id="miles_limit" placeholder="miles limit" />
           <button type="submit">Go</button>
+
+          <div>
+            <input type="checkbox" name="carfax_clean_title" value="true" /> Carfax Clean Title?
+          </div>
+
         </form>
 
       </div>
