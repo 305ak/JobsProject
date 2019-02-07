@@ -111,7 +111,19 @@ componentDidMount() {
         <p>Total Pages: {this.totalPages}</p>
         <p>Total Pages: Next >></p>
         <p>Current Page: {this.page}</p>
-        <p>next Page would be: {this.nextPage}</p>
+          {
+            this.prevPage &&
+            <p>
+              <a href="#previous">Previous</a>
+            </p>
+          }
+
+        {
+          this.nextPage &&
+          <p>
+            <a href="#next">Next</a>
+          </p>
+        }
         <p>prev Page would be: {this.prevPage}</p>
       </div>
 
