@@ -13,7 +13,7 @@ constructor() {
 componentDidMount() {
   const requestHeaders = { "Content-Type": "application/json", "Host": "marketcheck-prod.apigee.net" };
   let requestBody = {
-   "api_key": "9W7A1ilu6IdNNLlUu9N9pcrjobRW2WA6",
+   "api_key": "Zk9MS3TD2L958clPmaVXqVSeZFiPblD2",
    // "latitude": "25.803098",
    // "longitude": "-80.204394",
    // "radius": "10",
@@ -71,8 +71,13 @@ componentDidMount() {
   }
 
   get nextPage() {
-return (this.page + 1);
+    if (this.page >0 && this.page < this.totalPages) {
+      return this.page + 1
+    }
   }
+
+
+
 
   get prevPages() {
 return (this.page - 1);
@@ -81,7 +86,7 @@ return (this.page - 1);
   get queryParams() {
     return QS.parse(this.props.location.search);
   }
-  
+
   render(){
     return(
       <div>
