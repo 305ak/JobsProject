@@ -81,7 +81,7 @@ return (this.page - 1);
   get queryParams() {
     return QS.parse(this.props.location.search);
   }
-
+  
   render(){
     return(
       <div>
