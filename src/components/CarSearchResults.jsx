@@ -63,7 +63,7 @@ componentDidMount() {
   get queryParams() {
     return QS.parse(this.props.location.search);
   }
-
+  
   render(){
     return(
       <div>
@@ -85,7 +85,7 @@ componentDidMount() {
             })
           }
         </table>
-<p>Total Results: {this.num_found}</p> 
+<p>Total Results: {this.num_found}</p>
 
       </div>
 
