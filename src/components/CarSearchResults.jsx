@@ -76,11 +76,10 @@ componentDidMount() {
     }
   }
 
-
-
-
-  get prevPages() {
-return (this.page - 1);
+  get prevPage() {
+    if (this.page > 1 && this.page <= this.totalPages){
+      return this.page -1
+    }
   }
 
   get queryParams() {
@@ -108,11 +107,12 @@ return (this.page - 1);
             })
           }
         </table>
-<p>Total Results: {this.num_found}</p>
-<p>Total Pages: {this.totalPages}</p>
-<p>Total Pages: Next >></p>
-<p>Current Page: {this.page}</p>
-<p>next Page would be: {this.nextPage}</p>
+        <p>Total Results: {this.num_found}</p>
+        <p>Total Pages: {this.totalPages}</p>
+        <p>Total Pages: Next >></p>
+        <p>Current Page: {this.page}</p>
+        <p>next Page would be: {this.nextPage}</p>
+        <p>prev Page would be: {this.prevPage}</p>
       </div>
 
     )
