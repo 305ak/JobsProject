@@ -60,6 +60,23 @@ componentDidMount() {
     return this.state.num_found;
   }
 
+
+  get page() {
+    return this.queryParams.page || 1;
+  }
+
+  get totalPages() {
+    return Math.ceil(this.state.num_found / 50);
+  }
+
+  get nextPage() {
+return (this.queryParams.page + 1);
+  }
+
+  get prevPages() {
+return (this.queryParams.page - 1);
+  }
+
   get queryParams() {
     return QS.parse(this.props.location.search);
   }
@@ -85,8 +102,11 @@ componentDidMount() {
             })
           }
         </table>
-<p>Total Results: {this.num_found}</p> 
-
+<p>Total Results: {this.num_found}</p>
+<p>Total Pages: {this.totalPages}</p>
+<p>Total Pages: Next >></p>
+<p>Current Page: {this.page}</p>
+<p>next Page would be: {this.nextPage}</p>
       </div>
 
     )
